@@ -1,0 +1,72 @@
+[System]
+Name='haikal'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='nilai_ujian_tulis'
+Range=[0 100]
+NumMFs=3
+MF1='rendah':'trimf',[0 25 50]
+MF2='sedang':'trimf',[40 60 80]
+MF3='tinggi':'trimf',[70 90 100]
+
+[Input2]
+Name='pengalaman_kerja'
+Range=[0 10]
+NumMFs=3
+MF1='sedikit':'trimf',[0 2 4]
+MF2='sedang':'trimf',[3 5 7]
+MF3='banyak':'trimf',[6 8 10]
+
+[Input3]
+Name='sertifikat'
+Range=[0 10]
+NumMFs=3
+MF1='sedikit':'trimf',[0 2 4]
+MF2='cukup':'trimf',[3 5 7]
+MF3='banyak':'trimf',[6 8 10]
+
+[Output1]
+Name='tingkat_kelayakan'
+Range=[0 100]
+NumMFs=2
+MF1='tinggi':'trimf',[50 85 100]
+MF2='rendah':'trimf',[0 25 50]
+
+[Rules]
+1 1 1, 2 (1) : 1
+1 1 2, 2 (1) : 1
+1 1 3, 2 (1) : 1
+1 2 1, 2 (1) : 1
+1 2 2, 2 (1) : 1
+1 2 3, 2 (1) : 1
+1 3 1, 2 (1) : 1
+1 3 2, 2 (1) : 1
+1 3 3, 2 (1) : 1
+2 1 1, 2 (1) : 1
+2 1 2, 2 (1) : 1
+2 1 3, 2 (1) : 1
+2 2 1, 2 (1) : 1
+2 2 2, 1 (1) : 1
+2 2 3, 1 (1) : 1
+2 3 1, 1 (1) : 1
+2 3 2, 1 (1) : 1
+2 3 3, 1 (1) : 1
+3 1 1, 1 (1) : 1
+3 1 2, 1 (1) : 1
+3 1 3, 1 (1) : 1
+3 2 1, 1 (1) : 1
+3 2 2, 1 (1) : 1
+3 2 3, 1 (1) : 1
+3 3 1, 1 (1) : 1
+3 3 2, 1 (1) : 1
+3 3 3, 1 (1) : 1
